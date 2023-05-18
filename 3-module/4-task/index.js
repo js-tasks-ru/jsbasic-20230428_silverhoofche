@@ -1,3 +1,8 @@
 function showSalary(users, age) {
-  // ваш код...
+
+  let filteredList = users.filter(item => item.age <= age).map(function(arr){
+    return arr.name + ', ' + arr.balance;
+  });
+
+  return filteredList.join('\n');
 }
